@@ -1,4 +1,4 @@
-* Final course Project
+** Final course Project
 
 - This is a three weeks project of a web that allows to tagg Git-Hub repositories. In section INSERT the user can upload the repositories and tagg them.
 - In secion SEARCH, is possible to locate repositories by tag or username.
