@@ -1,0 +1,70 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Tag Code Library
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='https://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css', rel='stylesheet')
+    link(href='css/tag-it.css', rel='stylesheet')
+    link(href='css/styles.css', rel='stylesheet')
+    style.
+      body {
+      padding-top: 70px;
+      /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+      }
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      //- h2 Social Auth
+      //- br
+      //- a(href="/auth/github") Login via Github
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          |  
+          a.navbar-brand(href='#') Tag Code Library
+            #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li
+                a(href='/') Search
+              li
+                a(href='./myRepos.html') Insert        
+    .container
+      .row
+        .col-lg-12.text-center
+          h1 Tag Code Library
+          p.lead Search your projects by TAGs in GitHub
+    .container
+      form#git-search.form(action='/repos', method='POST', role='form')
+        .form-group
+          label(for='exampleInputEmail1') Tags
+
+        <ul placeholder="tags"  id="myTags">
+            <!-- Existing list items will be pre-added to the tags -->
+        </ul>
+
+        #name.input-group
+          span#basic-addon1.input-group-addon @
+          |  
+          input.form-control(name='owner' type='text', placeholder='Username', aria-describedby='basic-addon1')
+
+
+        |  
+        button#search_button.btn.btn-default(type='submit') Git-Hub me
+        block content
+
+    script(src='https://code.jquery.com/jquery-2.2.4.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js')
+    script(src='js/tag-it.min.js')
+    script(src='js/main.js')
+    script(src='js/delete.js')

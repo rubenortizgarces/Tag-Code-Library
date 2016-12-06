@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Tag Code Library</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href='css/styles.css'>
+	<link rel="stylesheet" href="css/ng-tags-input.min.css"> 
+	 <style>
+        body {
+            padding-top: 70px;
+            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+   
+</head>
+<body>
+
+
+	<div ng-controller="myReposController" class="container-fluid">
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Tag Code Library</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="/">Search</a>
+						</li>
+						<li>
+							<a href="/myRepos.html">Insert</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container -->
+		</nav>
+
+		<!-- Page Content -->
+		<div class="container-fluid">
+			<div ng-show="user" id="user">
+			<figure class="figure">
+			<img class="img-responsive img-thumbnail" alt="Responsive image" src="{{avatar}}">
+			<figcaption class="figure-caption">Hello! <span>{{user}}</span></figcaption>
+			</figure>
+
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h1 class="taggit">Tag Code Library</h1>
+					<p class="lead"> Search and tag your Github projects</p>
+				</div>
+			</div>
+			<!-- /.row -->
+
+		</div>
+		<!-- /.container -->
+		<div class="container">
+		<div ng-controller= "myReposController" class="container input-group">
+			<form ng-submit="findRepos($event)" action="" method="" role="form">
+
+				<div class="form-group">
+				 <label for="exampleInputEmail1">User</label>
+					<input ng-model="gitUser" type="text" class="form-control" id="" placeholder="Input name..." value="rubenortizgarces">
+				</div>
+				<div class="btn-group" role="group" aria-label="...">
+				<button type="submit" class="btn btn-default">Search</button>
+				</div>
+			</form>
+		</div>
+
+	</div>
+	
+	<div ng-include src="'tagRepos.html'"></div>
+	
+
+	
+
+	<!-- <script src="https://opensource.keycdn.com/angularjs/1.5.8/angular.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+
+
+	<script src="js/app.js"></script>
+	<script src="js/controllers/myReposController.js"></script>
+	<script src="js/controllers/tagReposController.js"></script>
+	<script src="js/Services/service.js"></script>
+	<script src="js/ui-bootstrap-tpls-2.2.0.min.js"></script>
+	<script type="text/javascript" src="js/ng-tags-input.min.js"></script>
+
+
+</body>
+</html>

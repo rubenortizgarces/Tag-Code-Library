@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+
+button.delete{
+	display: inline-block;
+	margin-bottom: 0px;
+	float: right;
+	margin-top: 40px;	
+}
+
+.form-group {
+    margin-bottom: 0px!important;
+}
+.name{
+	font-weight: bold;
+	font-size: 24px;
+}
+.description{
+	padding-top: 15px !important;
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 15px;
+}
+
+h1 {
+	font-weight: 900;
+	font-family: Lato;
+}
+
+.lead{
+	font-weight:700;
+	font-family:Lato;
+}
+
+small{
+	margin-left:10px;
+}
+
+.btn-default{
+	margin-top:10px;
+	margin-bottom: 60px;
+}
+
+#basic-addon1{
+	background-color: rgba(204, 204, 204, 0.60)!important;	
+}
+
+
+p.tags{
+	display: inline-block;
+	float:left;
+	margin-right: 20px;
+	border: 2px solid rgba(34, 34, 34, 0.8);
+	border-radius:30px;
+	padding: 1px 6px 1px 6px;
+	background-color:rgba(255, 255, 255, 0.25);
+
+}
+.panel-heading{
+	background-color: rgba(235, 146, 90, 0.25)!important;
+
+}
+
+.panel-body{
+	background-color: rgba(245, 245, 245, 0.25)!important
+}
+
+
+.img-thumbnail{
+	width: 100px;
+	height: 100px;
+}
+
+
+div #user {
+	position: absolute;
+	right: 30px;
+	max-width: 200px
+}
+
+div #user img{
+	width: 100px;
+}
+figcaption{
+	text-align: center;
+}
+
+figcaption span{
+	font-weight: bold;
+}
+
+
+/*footer {
+	margin-top: 30px;
+	padding-top: 10px;
+	color: #222222;
+}*/
+
+img {
+	width: 220px;
+	height: 300px;
+	margin: 0px 20px 0px 20px;
+
+}
+
+h1 {
+	padding: 20px 0px 40px 0px;
+	color: #302d2d;
+
+}
+
+h4 {
+	padding: 0px 20px 30px 20px;
+	max-width: 210px;
+	color: #302d2d;
+}
+body{
+	background-image: url(/img/grungy-abstract-squares-patterns-7.jpg);
+	/*background-image: url(/img/bright-pink-and-orange-seamless-patterns-16.jpg)*/
+}
+
+td {
+	color:#302d2d;
+}
+
+
+
+

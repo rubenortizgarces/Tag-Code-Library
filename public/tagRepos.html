@@ -1,0 +1,77 @@
+
+
+<!-- <div class="flexruben" ng-controller="tagReposController">
+
+  <figure ng-repeat="userRepo in userRepos">
+    <img class="img-thumbnail" src="{{userRepo.owner.avatar_url}}"/>
+    <figcaption><a href="{{userRepo.html_url}}">{{userRepo.name}}</a></figcaption>
+    <form  ng-submit="insertTags($event)" action="" method="" class="" >
+	<tags-input ng-model="tags"></tags-input>
+	<button type="submit" class="btn btn-default">Upload</button>
+	</form>
+  </figure>
+
+</div> -->
+
+
+
+
+
+<div ng-controller="tagReposController" class="table-responsive">
+
+	<div class="container">
+		<div class="table-responsive row" ng-repeat="pending in pendings">
+			<table class="table table-condensed">
+				<tr>
+					<th>Name</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td class="col-lg-4"><a class="name" href="{{pending.html_url}}">{{pending.name}}</a></td>
+					<td class="description col-lg-8">{{pending.description}}</td>
+				</tr>
+			</table>
+			<form  ng-submit="insertTags($event,$index,tags)" action="" method="" class="tagger" >
+				
+				<tags-input ng-model="tags"></tags-input>
+
+				<button type="submit" class="btn btn-default" ng-model="index" value={{$index}}>Save</button>
+			</form>
+		</div>
+		<div ng-show="alert" class="alert alert-success" role="alert">...</div>
+
+
+
+	</div>
+
+
+
+		<!-- <div ng-repeat="userRepo in userRepos">
+		<h1>Hello, {{user}}!</h1>
+
+
+			<p ng-model="index" value="{{$index}}">{{$index}}</p>
+			<p ng-model="name" value="{{userRepo.name}}">NAME:{{userRepo.name}}</p>
+			<p>DESC:{{userRepo.description}}</p>
+			<p>ID:{{userRepo.id}}</p>
+			<p>URL:{{userRepo.html_url}}</p>
+			<p>OWNER{{userRepo.owner.id}}</p>
+
+			
+			<form  ng-submit="insertTags($event)" action="" method="" class="" >
+				
+					<tags-input ng-model="tags"></tags-input>
+			
+				<button type="submit" class="btn btn-primary">Search</button>
+			</form>
+			</div>
+</div>
+
+
+
+
+
+
+
+
+ -->

@@ -1,0 +1,30 @@
+extends index
+block content
+
+	body
+
+		
+
+		.panel.panel-default
+			each repo,index in repos
+				.panel-heading
+					h3.panel-title(data-id=repo._id)
+						a(href=repo.html_url)= repo.name
+						small= repo.owner
+						button.btn.btn-default.delete(type='submit') delete
+				.panel-body
+					each tags, index in repo.tags
+						p.tags= tags.text 
+							
+
+													
+
+
+
+
+
+												
+
+
+												//- td.table-item(data-index=repo.github_id)= 8
+													
